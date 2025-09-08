@@ -1,0 +1,14 @@
+[build]
+  # This is a Streamlit app, not a static site
+  # Netlify doesn't support Python apps directly
+  # This file is created for compatibility but won't be used
+  publish = "."
+  command = "echo 'This is a Streamlit app - use Streamlit Community Cloud instead'"
+
+[build.environment]
+  PYTHON_VERSION = "3.9"
+
+[[redirects]]
+  from = "/*"
+  to = "https://pfizer-demo-streamlit.streamlit.app/:splat"
+  status = 301
